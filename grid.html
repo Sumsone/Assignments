@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS GRID LAYOUT</title>
+  <style>
+    body {
+      margin: 30px;
+
+    }
+
+    .grid-container {
+      background: #eee;
+      max-width: 750px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 200px 250px;
+      gap: 10px;
+    }
+
+    .grid-container>div {
+      background: #ccc;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #777;
+
+    }
+
+    .grid-container>div:nth-child(1) {
+      grid-column: 1 / span 3;
+      color: orangered;
+      background-color: orangered;
+
+    }
+
+    .grid-container>div:nth-child(2) {
+      grid-column: span 2;
+      color: orange;
+      background-color: orange;
+
+    }
+
+    .grid-container>div:nth-child(3) {
+      grid-column: span 2;
+      color: green;
+      background-color: green;
+
+    }
+
+    .grid-container>div:nth-child(4) {
+      grid-column: 3 / 6;
+      align-self: start;
+      grid-row: 2;
+      color: rgb(26, 151, 200);
+      background-color: rgb(26, 151, 200);
+
+    }
+
+    .grid-container>div:nth-child(5) {
+      grid-column: 3 / 6;
+      grid-row: 2;
+      align-self: end;
+      color: rgb(26, 151, 200);
+      background-color: rgb(26, 151, 200);
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+</body>
+
+</html>
+</html>
